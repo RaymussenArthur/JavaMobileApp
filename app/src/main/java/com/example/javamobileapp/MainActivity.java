@@ -1,6 +1,7 @@
 package com.example.javamobileapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textViewHello;
     private Button buttonChangeText;
+    private Button buttonPageCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 textViewHello.setText("Button Clicked!");
             }
         });
+
+        buttonPageCalc = findViewById(R.id.buttonPageCalc);
+        buttonPageCalc.setOnClickListener(view -> startActivity(new Intent(this, CalcActivity.class)));
     }
 }
