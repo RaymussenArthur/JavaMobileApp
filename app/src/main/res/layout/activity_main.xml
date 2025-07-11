@@ -1,42 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/calculator_background"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="@dimen/activity_padding"
+    tools:context=".MainActivity">
 
+    <!-- Result Display -->
     <TextView
-        android:id="@+id/textViewHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Hello!!"
-        android:textColor="#000000"
-        android:textSize="24sp" />
+        android:id="@+id/resultTextView"
+        style="@style/ResultDisplayStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/result_value"
+        tools:text="0" />
 
-    <Button
-        android:id="@+id/buttonChangeText"
-        android:layout_width="wrap_content"
+    <!-- Button Grid Container -->
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click Test" />
+        android:columnCount="4"
+        android:padding="@dimen/grid_padding"
+        android:rowCount="5">
 
-    <Button
-        android:id="@+id/buttonPageCalc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculator" />
+        <!-- Row 1: AC, /, * -->
+        <Button
+            android:id="@+id/buttonClear"
+            style="@style/CalculatorButton.Control"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/cd_clear"
+            android:text="@string/button_clear"
+            tools:ignore="VisualLintButtonSize" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        <Button
+            android:id="@+id/buttonDivide"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_divide"
+            android:text="@string/button_divide"
+            tools:ignore="VisualLintButtonSize" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        <Button
+            android:id="@+id/buttonMultiply"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_multiply"
+            android:text="@string/button_multiply"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Row 2: 7, 8, 9, + -->
+        <Button
+            android:id="@+id/button7"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_7"
+            android:text="@string/button_7"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_8"
+            android:text="@string/button_8"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_9"
+            android:text="@string/button_9"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_add"
+            android:text="@string/button_add"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Row 3: 4, 5, 6, - -->
+        <Button
+            android:id="@+id/button4"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_4"
+            android:text="@string/button_4"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_5"
+            android:text="@string/button_5"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_6"
+            android:text="@string/button_6"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_subtract"
+            android:text="@string/button_subtract"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Row 4: 1, 2, 3, = -->
+        <Button
+            android:id="@+id/button1"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_1"
+            android:text="@string/button_1"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_2"
+            android:text="@string/button_2"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_3"
+            android:text="@string/button_3"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonEqual"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_equals"
+            android:text="@string/button_equal"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- Row 5: 0, ., % -->
+        <Button
+            android:id="@+id/button0"
+            style="@style/CalculatorButton.Numeric"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/cd_0"
+            android:text="@string/button_0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            style="@style/CalculatorButton.Numeric"
+            android:contentDescription="@string/cd_decimal"
+            android:text="@string/button_decimal"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/buttonpercent"
+            style="@style/CalculatorButton.Operator"
+            android:contentDescription="@string/cd_percent"
+            android:text="@string/button_percent"
+            tools:ignore="VisualLintButtonSize" />
+
+    </GridLayout>
+
 </LinearLayout>

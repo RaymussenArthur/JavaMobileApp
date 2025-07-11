@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Palette -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Calculator Specific Colors -->
+    <color name="calculator_background">#1C1C1C</color>
+    <color name="result_text_color">@color/white</color>
+
+    <color name="button_numeric_background_tint">#505050</color>
+    <color name="button_numeric_text_color">@color/white</color>
+
+    <color name="button_operator_background_tint">#FF9500</color>
+    <color name="button_operator_text_color">@color/white</color>
+
+    <color name="button_control_background_tint">#A5A5A5</color>
+    <color name="button_control_text_color">@color/black</color>
 </resources>

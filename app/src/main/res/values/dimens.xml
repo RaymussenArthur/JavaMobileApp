@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Spacing -->
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="grid_padding">8dp</dimen>
+    <dimen name="button_margin">4dp</dimen>
+
+    <!-- Result Display -->
+    <dimen name="result_display_margin_bottom">16dp</dimen>
+    <dimen name="result_display_padding">24dp</dimen>
+    <dimen name="result_display_text_size">48sp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="button_padding_vertical">16dp</dimen>
+    <dimen name="button_padding_horizontal">16dp</dimen>
+    <dimen name="button_text_size">24sp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+</resources>

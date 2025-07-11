@@ -1,0 +1,65 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/button_operator_background_tint</item>
+        <item name="colorPrimaryVariant">@color/button_operator_background_tint</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/button_numeric_background_tint</item>
+        <item name="colorSecondaryVariant">@color/button_numeric_background_tint</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/calculator_background</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Style for the Result Display TextView -->
+    <style name="ResultDisplayStyle">
+        <item name="android:layout_marginBottom">@dimen/result_display_margin_bottom</item>
+        <item name="android:gravity">end|bottom</item>
+        <item name="android:padding">@dimen/result_display_padding</item>
+        <item name="android:textColor">@color/result_text_color</item>
+        <item name="android:textSize">@dimen/result_display_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:contentDescription">@string/cd_result_display</item>
+    </style>
+
+    <!-- Base Style for all Calculator Buttons (using MaterialButton) -->
+    <style name="CalculatorButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item> <!-- Needed for GridLayout columnWeight -->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_margin">@dimen/button_margin</item>
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item> <!-- MaterialButton corner radius -->
+    </style>
+
+    <!-- Style for Numeric Buttons -->
+    <style name="CalculatorButton.Numeric" parent="CalculatorButton">
+        <item name="android:backgroundTint">@color/button_numeric_background_tint</item>
+        <item name="android:textColor">@color/button_numeric_text_color</item>
+    </style>
+
+    <!-- Style for Operator Buttons -->
+    <style name="CalculatorButton.Operator" parent="CalculatorButton">
+        <item name="android:backgroundTint">@color/button_operator_background_tint</item>
+        <item name="android:textColor">@color/button_operator_text_color</item>
+    </style>
+
+    <!-- Style for Control Buttons (like AC) -->
+    <style name="CalculatorButton.Control" parent="CalculatorButton">
+        <item name="android:backgroundTint">@color/button_control_background_tint</item>
+        <item name="android:textColor">@color/button_control_text_color</item>
+    </style>
+
+</resources>
