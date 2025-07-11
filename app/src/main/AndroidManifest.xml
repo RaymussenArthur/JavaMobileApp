@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CalcActivity" android:exported="true" />
+        <activity android:name=".Feature2Activity" android:exported="true" />
+        <activity android:name=".Feature3Activity" android:exported="true" />
+        <activity android:name=".Feature4Activity" android:exported="true" />
     </application>
 
 </manifest>
