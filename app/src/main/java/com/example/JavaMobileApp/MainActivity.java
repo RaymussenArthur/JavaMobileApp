@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
         params.setMargins(0, 24, 0, 24);
 
         Button buttonCalc = new Button(this);
-        buttonCalc.setText("Calculator");
+        buttonCalc.setText("Basic Calculator");
         buttonCalc.setLayoutParams(params);
         layout.addView(buttonCalc);
         buttonCalc.setOnClickListener(v -> startActivity(new Intent(this, CalcActivity.class)));
 
         Button buttonFeature2 = new Button(this);
-        buttonFeature2.setText("Feature 2");
+        buttonFeature2.setText("Unit Converter");
         buttonFeature2.setLayoutParams(params);
         layout.addView(buttonFeature2);
-        buttonFeature2.setOnClickListener(v -> startActivity(new Intent(this, Feature2Activity.class)));
+        buttonFeature2.setOnClickListener(v -> startActivity(new Intent(this, UnitConverterActivity.class)));
 
         Button buttonFeature3 = new Button(this);
         buttonFeature3.setText("Feature 3");
